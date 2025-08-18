@@ -5,10 +5,12 @@ public class MediaAluno {
         Scanner sc = new Scanner(System.in);
 
         // Entrada da quantidade de alunos
+        System.out.println("\t\t--- Alunos --- ");
         System.out.print("Digite a quantidade de alunos: ");
         int qtdAlunos = sc.nextInt();
 
         // Entrada da quantidade de notas
+        System.out.println("\n\t\t--- NOTAS ---");
         System.out.print("Digite a quantidade de notas: ");
         int n = sc.nextInt();
 
@@ -18,17 +20,18 @@ public class MediaAluno {
         double[] media = new double[qtdAlunos];
 
         // Escolha do tipo de média
+        System.out.println("\n\t\t--- Tipo de Media --- ");
         System.out.print("Digite 1 para média simples ou 2 para média ponderada: ");
         int tipo = sc.nextInt();
         if (tipo != 1 && tipo != 2) {
             System.out.println("\n*Modelo de média inválido*");
             System.exit(0);
         }
-
+        System.out.println(" ");
         // Loop para cada aluno
         for (int q = 0; q < qtdAlunos; q++) {
 
-        // Reinicia toda vez que entra no laço
+            // Reinicia toda vez que entra no laço
             double somaNotas = 0;
             double somaPesos = 0;
 
@@ -42,7 +45,6 @@ public class MediaAluno {
                     pesos[i] = sc.nextDouble();
                 }
             }
-
             // Cálculo da média
             if (tipo == 1) { // Média simples
                 for (int i = 0; i < n; i++) {
